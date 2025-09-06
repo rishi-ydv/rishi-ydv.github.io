@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rishi Yadav | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full top-0 bg-slate-900/80 backdrop-blur-sm text-white shadow-lg z-50"
+    >
+      <div
+        class="container mx-auto flex justify-between items-center px-6 py-4"
+      >
+        <h1 class="text-2xl font-bold tracking-wider">Rishi Yadav</h1>
+        <button
+          id="menu-toggle"
+          class="md:hidden text-3xl transition-transform duration-300"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul
+          id="menu"
+          class="hidden md:flex items-center gap-8 text-sm font-medium"
+        >
+          <li>
+            <a
+              href="#about"
+              class="hover:text-cyan-400 transition-colors duration-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#education"
+              class="hover:text-cyan-400 transition-colors duration-300"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="hover:text-cyan-400 transition-colors duration-300"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="hover:text-cyan-400 transition-colors duration-300"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#certificates"
+              class="hover:text-cyan-400 transition-colors duration-300"
+              >Certificates</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition-all duration-300"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- Mobile Menu -->
+      <ul id="mobile-menu" class="hidden flex-col bg-slate-800 md:hidden">
+        <li>
+          <a
+            href="#about"
+            class="mobile-menu-item block px-6 py-3 hover:bg-slate-700 transition-colors duration-300"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#education"
+            class="mobile-menu-item block px-6 py-3 hover:bg-slate-700 transition-colors duration-300"
+            >Education</a
+          >
+        </li>
+        <li>
+          <a
+            href="#skills"
+            class="mobile-menu-item block px-6 py-3 hover:bg-slate-700 transition-colors duration-300"
+            >Skills</a
+          >
+        </li>
+        <li>
+          <a
+            href="#projects"
+            class="mobile-menu-item block px-6 py-3 hover:bg-slate-700 transition-colors duration-300"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            href="#certificates"
+            class="mobile-menu-item block px-6 py-3 hover:bg-slate-700 transition-colors duration-300"
+            >Certificates</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="mobile-menu-item block px-6 py-3 hover:bg-slate-700 transition-colors duration-300"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header
+      id="home"
+      class="flex flex-col items-center justify-center text-center min-h-screen pt-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white"
+    >
+      <div class="container mx-auto px-6">
+        <div class="flex justify-center">
+          <img
+            src="./assets/Rishi-profile-img.JPG"
+            alt="Profile Photo of Rishi Yadav"
+            class="w-40 h-40 rounded-full shadow-2xl mb-6 border-4 border-slate-500"
+          />
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+          Full Stack Web Developer
+        </h2>
+        <p
+          id="typing-text"
+          class="mt-4 max-w-2xl mx-auto text-slate-300 text-lg text-center"
+        ></p>
+        <a
+          href="#projects"
+          class="mt-8 inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:scale-105"
+          >View My Work</a
+        >
+        <a
+          href="./assets/MERN.pdf"
+          download="Rishi_Yadav_Resume.pdf"
+          class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:scale-105"
+        >
+          <i class="fas fa-download mr-2"></i> Download Resume
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container mx-auto px-6">
+      <!-- About -->
+      <section id="about" class="py-20">
+        <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+        <p class="max-w-3xl mx-auto text-center text-slate-600 leading-relaxed">
+          I’m Rishi Yadav, a final-year B.Tech CSE student and passionate Full
+          Stack Web Developer skilled in the MERN stack, Java, and modern web
+          technologies. I enjoy building scalable, user-friendly applications
+          and continuously exploring cloud and emerging tech to grow as a
+          developer.
+        </p>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="py-20 bg-slate-100 rounded-xl">
+        <h2 class="text-3xl font-bold mb-12 text-center">Education</h2>
+        <div class="max-w-3xl mx-auto relative">
+          <!-- Vertical line -->
+          <div
+            class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-cyan-200"
+          ></div>
+          <div class="space-y-12">
+            <!-- 10th Grade -->
+            <div class="flex items-center w-full">
+              <div class="w-1/2 pr-8 text-right">
+                <h3 class="text-xl font-semibold">10th Grade</h3>
+                <p class="text-slate-600">ANGELS' ENGLISH BOARDING SCHOOL</p>
+                <p class="text-sm text-slate-500">88.75 / 100</p>
+              </div>
+              <div
+                class="w-12 h-12 rounded-full bg-cyan-500 flex-shrink-0 flex items-center justify-center text-white z-10"
+              >
+                <i class="fas fa-school"></i>
+              </div>
+              <div class="w-1/2 pl-8"></div>
+            </div>
+
+            <!-- 12th Grade -->
+            <div class="flex items-center w-full">
+              <div class="w-1/2 pr-8"></div>
+              <div
+                class="w-12 h-12 rounded-full bg-cyan-500 flex-shrink-0 flex items-center justify-center text-white z-10"
+              >
+                <i class="fas fa-school"></i>
+              </div>
+              <div class="w-1/2 pl-8 text-left">
+                <h3 class="text-xl font-semibold">12th Grade</h3>
+                <p class="text-slate-600">MODEL SECONDARY SCHOOL</p>
+                <p class="text-sm text-slate-500">
+                  National Examinations Board
+                </p>
+                <p class="text-sm text-slate-500">78.25 / 100</p>
+              </div>
+            </div>
+            <!-- B.Tech -->
+            <div class="flex items-center w-full">
+              <div class="w-1/2 pr-8 text-right">
+                <h3 class="text-xl font-semibold">
+                  B.Tech. - Computer Science & Engineering , Full Stack and
+                  DevOps
+                </h3>
+                <p class="text-slate-600">DIT University</p>
+                <p class="text-sm text-slate-500">CGPA: 8.60 / 10</p>
+              </div>
+              <div
+                class="w-12 h-12 rounded-full bg-cyan-500 flex-shrink-0 flex items-center justify-center text-white z-10"
+              >
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="w-1/2 pl-8"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="py-20">
+        <h2 class="text-3xl font-bold mb-12 text-center">Technical Skills</h2>
+        <div class="max-w-4xl mx-auto space-y-12">
+          <!-- Languages -->
+          <div>
+            <h3 class="text-2xl font-semibold mb-6 text-center text-slate-700">
+              Languages
+            </h3>
+            <div class="flex justify-center flex-wrap gap-8">
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="Java"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                  alt="Java Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">Java</p>
+              </div>
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="JavaScript"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  alt="JavaScript Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">JavaScript</p>
+              </div>
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="HTML5"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                  alt="HTML5 Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">HTML5</p>
+              </div>
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="CSS3"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                  alt="CSS3 Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">CSS3</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frameworks -->
+          <div>
+            <h3 class="text-2xl font-semibold mb-6 text-center text-slate-700">
+              Frameworks
+            </h3>
+            <div class="flex justify-center flex-wrap gap-8">
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="Node.js"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                  alt="Node.js Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">Node.js</p>
+              </div>
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="Express.js"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+                  alt="Express.js Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">Express</p>
+              </div>
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="Node.js"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNhoXisDruJMDAq3Ltd-wuaMW2lGxck9wAKw&s"
+                  alt="Tailwind CSS Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">Tailwind CSS</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div>
+            <h3 class="text-2xl font-semibold mb-6 text-center text-slate-700">
+              Databases
+            </h3>
+            <div class="flex justify-center flex-wrap gap-8">
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="MongoDB"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"
+                  alt="MongoDB Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">MongoDB</p>
+              </div>
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="MySQL"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+                  alt="MySQL Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">MySQL</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div>
+            <h3 class="text-2xl font-semibold mb-6 text-center text-slate-700">
+              Tools
+            </h3>
+            <div class="flex justify-center flex-wrap gap-8">
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="Git"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                  alt="Git Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">Git</p>
+              </div>
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="GitHub"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                  alt="GitHub Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">GitHub</p>
+              </div>
+              <div
+                class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-32"
+                title="Postman"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                  alt="Postman Icon"
+                  class="w-12 h-12 mb-2"
+                />
+                <p class="font-medium">Postman</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="py-20 bg-slate-100 rounded-xl">
+        <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-2xl p-8 flex flex-col transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <h3 class="text-xl font-semibold text-slate-900">
+              FoodyDoor – Online Food Ordering & Restaurant Management System
+            </h3>
+            <p class="text-slate-600 mt-2 flex-grow">
+              A real-world MERN stack project with secure authentication,
+              real-time order tracking using WebSockets, admin/customer
+              dashboards, email service integration, and AI-powered product
+              descriptions.
+            </p>
+            <div class="mt-6">
+              <a
+                href="#"
+                class="text-cyan-500 hover:text-cyan-700 font-semibold"
+                >View Project <i class="fas fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-2xl p-8 flex flex-col transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <h3 class="text-xl font-semibold text-slate-900">
+              Portfolio Website
+            </h3>
+            <p class="text-slate-600 mt-2 flex-grow">
+              A personal portfolio website built with HTML, Tailwind CSS, and
+              JavaScript to showcase education, skills, and projects in a
+              responsive design.
+            </p>
+            <div class="mt-6">
+              <a
+                href="#"
+                class="text-cyan-500 hover:text-cyan-700 font-semibold"
+                >View Source <i class="fab fa-github ml-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certificates Section -->
+      <section id="certificates" class="py-20">
+        <h2 class="text-3xl font-bold mb-12 text-center">
+          Certificates & Achievements
+        </h2>
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"
+        >
+          <!-- Certificate Card 1 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-all duration-300"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNhoXisDruJMDAq3Ltd-wuaMW2lGxck9wAKw&s"
+              alt="Certificate Thumbnail"
+              class="w-full h-48 object-contain"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold text-slate-900">Tailwind CSS</h3>
+              <p class="text-slate-500 text-sm mt-1">Coursera</p>
+              <a
+                href="https://www.coursera.org/account/accomplishments/specialization/HG336IO881BS"
+                class="inline-block mt-4 bg-cyan-100 text-cyan-800 text-xs font-bold px-3 py-1 rounded-full hover:bg-cyan-200 transition-colors"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+          <!-- Certificate Card 2 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-all duration-300"
+          >
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/027/127/463/small_2x/javascript-logo-javascript-icon-transparent-free-png.png"
+              alt="Certificate Thumbnail"
+              class="w-full h-48 object-contain"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold text-slate-900">
+                Programming with JavaScript
+              </h3>
+              <p class="text-slate-500 text-sm mt-1">Coursera</p>
+              <a
+                href="https://www.coursera.org/account/accomplishments/verify/KY56AZR2OFTK"
+                class="inline-block mt-4 bg-cyan-100 text-cyan-800 text-xs font-bold px-3 py-1 rounded-full hover:bg-cyan-200 transition-colors"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+          <!-- Certificate Card 3 -->
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-all duration-300"
+          >
+            <img
+              src="https://git-scm.com/images/logos/logomark-orange@2x.png"
+              alt="Certificate Thumbnail"
+              class="w-full h-48 object-contain"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold text-slate-900">
+                GIT For Beginners
+              </h3>
+              <p class="text-slate-500 text-sm mt-1">UdemyL</p>
+              <a
+                href="https://www.udemy.com/certificate/UC-bd5875ec-f4cc-4da0-9edd-540976110297/"
+                class="inline-block mt-4 bg-cyan-100 text-cyan-800 text-xs font-bold px-3 py-1 rounded-full hover:bg-cyan-200 transition-colors"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="py-20 text-center">
+        <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+        <p class="max-w-xl mx-auto text-slate-600 mb-8">
+          I'm currently open to new opportunities. Feel free to reach out via
+          email or connect with me on social media.
+        </p>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-6"
+        >
+          <a
+            href="mailto:ydvrishi1@gmail.com"
+            class="bg-white hover:bg-cyan-50 shadow-md text-slate-800 font-bold py-3 px-6 rounded-full transition-all duration-300 flex items-center gap-2"
+          >
+            <i class="fas fa-envelope"></i> ydvrishi1@gmail.com
+          </a>
+          <div class="flex gap-4">
+            <a
+              href="https://linkedin.com/in/rishi-ydv"
+              class="text-slate-500 hover:text-cyan-500 text-2xl transition-colors"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/rishi-ydv"
+              class="text-slate-500 hover:text-cyan-500 text-2xl transition-colors"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+      <a
+        href="#home"
+        title="Back to Home"
+        class="fixed bottom-6 right-6 z-50 bg-cyan-500 hover:bg-cyan-600 text-white shadow-lg p-4 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-300"
+      >
+        <i class="fas fa-home text-2xl"></i>
+      </a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white text-center py-8">
+      <div class="container mx-auto">
+        <div class="flex justify-center gap-6 mb-4">
+          <a
+            href="https://linkedin.com/in/rishi-ydv"
+            class="text-xl hover:text-cyan-400 transition-colors"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/rishi-ydv"
+            class="text-xl hover:text-cyan-400 transition-colors"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+        <p class="text-slate-400 text-sm">
+          &copy; 2024 Rishi Yadav. All Rights Reserved.
+        </p>
+        <p class="text-slate-500 text-xs mt-1">
+          Designed and Developed with
+          <i class="fas fa-heart text-red-500"></i> by Rishi Yadav
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Menu & Smooth Scroll -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = menuToggle.querySelector("i");
+
+      // Mobile menu toggle
+      menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        // Optional: change icon on toggle
+        if (mobileMenu.classList.contains("hidden")) {
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+          menuToggle.classList.remove("rotate-90");
+        } else {
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-times");
+          menuToggle.classList.add("rotate-90");
+        }
+      });
+
+      // Smooth scrolling for all anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+
+          // If it's a mobile menu item, close the menu
+          if (
+            anchor.classList.contains("mobile-menu-item") &&
+            !mobileMenu.classList.contains("hidden")
+          ) {
+            mobileMenu.classList.add("hidden");
+            menuIcon.classList.remove("fa-times");
+            menuIcon.classList.add("fa-bars");
+            menuToggle.classList.remove("rotate-90");
+          }
+        });
+      });
+
+      const text =
+        "Hi! I’m Rishi Yadav, a passionate full stack web developer dedicated to building modern, scalable, and user-friendly applications.";
+      const typingElement = document.getElementById("typing-text");
+      let index = 0;
+
+      function typeWriter() {
+        if (index < text.length) {
+          typingElement.innerHTML = text.substring(0, index + 1);
+          index++;
+          setTimeout(typeWriter, 80); // typing speed
+        } else {
+          setTimeout(() => {
+            index = 0;
+            typingElement.innerHTML = "";
+            typeWriter();
+          }, 1500); // delay before restart
+        }
+      }
+
+      typeWriter();
+    </script>
+  </body>
+</html>
